@@ -5,8 +5,9 @@ class Utilidades:
 
     """
     -> Pega as configurações do arquivo
-    :return: retorna dicionário com valores de configuração
+    return: retorna dicionário com valores de configuração
     """
+
     def getConfiguration(self):
         values = {}
         try:

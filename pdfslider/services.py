@@ -13,9 +13,10 @@ class ServiceSlider:
         self.sistemas = {}
 
     """
-       -> Pega lista de arquivo dentro da pasta indicada no arquivo de configuração
-       return: List com path dos arquivos
+    -> Pega lista de arquivo dentro da pasta indicada no arquivo de configuração
+    return: List com path dos arquivos
     """
+
     def get_files(self):
         lista = []
         try:
@@ -28,7 +29,3 @@ class ServiceSlider:
         except:
             print(Exception().with_traceback())
         return lista
-
-
-for f in ServiceSlider().get_files():
-    print(f)
