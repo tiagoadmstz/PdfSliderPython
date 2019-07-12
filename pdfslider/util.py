@@ -7,13 +7,12 @@ class Utilidades:
     -> Pega as configurações do arquivo
     return: retorna dicionário com valores de configuração
     """
-
-    def getConfiguration(self):
+    def get_configuration(self):
         values = {}
         try:
             path = os.getcwd() + '\\configuration.conf'
             if(not os.path.exists(path)):
-                self.gravarArquivoConfiguracao(self.getInitialConfiguration())
+                self.gravar_arquivo_configuracao(self.get_initial_configuration())
             for ln in open(path, 'r').readlines():
                 itens = ln.split('::')
                 values[itens[0]] = itens[1].replace('\n', '')
@@ -21,7 +20,7 @@ class Utilidades:
             print(ex.__cause__)
         return values
 
-    def getInitialConfiguration(self):
+    def get_initial_configuration(self):
         return {
             'icone': 'null',
             'arquivos': 'null',
@@ -32,7 +31,7 @@ class Utilidades:
             'loopArquivo': 'true'
         }
 
-    def gravarArquivoConfiguracao(self, configuracoes):
+    def gravar_arquivo_configuracao(self, configuracoes):
         try:
             path = os.getcwd() + '\\configuration.conf'
             if(not os.path.exists(path)):
