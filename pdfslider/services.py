@@ -2,6 +2,7 @@ import os
 import _thread
 from util import Utilidades
 
+
 class ServiceSlider:
 
     def __init__(self):
@@ -12,22 +13,22 @@ class ServiceSlider:
         self.sistemas = {}
 
     """
-        Pega lista de arquivo dentro da pasta indicada no arquivo de configuração
-        return List com path dos arquivos
+       -> Pega lista de arquivo dentro da pasta indicada no arquivo de configuração
+       return: List com path dos arquivos
     """
     def get_files(self):
+        lista = []
         try:
-            dir = Utilidades().getConfiguration().get("arquivos")
-            if(os.path.isdir(dir)):  # dir.isDirectory():
-                for f in dir.readline:
+            path = Utilidades().getConfiguration().get("arquivos")
+            if(os.path.isdir(path)):
+                for f in os.listdir(path):
                     lista.append(f)
-                # Arrays.asList(dir.listFiles(new PdfFilter())).forEach(f -> lista.add(f.getPath()))
             else:
-                lista.append(dir.name)
-                # lista.add(dir.getPath())
+                lista.append(path)
         except:
             print(Exception().with_traceback())
-    #return lista
+        return lista
 
 
-print(Utilidades().getConfiguration())
+for f in ServiceSlider().get_files():
+    print(f)
