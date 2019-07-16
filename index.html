@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Configuração de Sistema</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <fieldset>
+                <div>
+                    <label>Ícone do Sistema</label>
+                    <input type="url" />
+                    <button>Selecionar</button>
+                </div>
+                <div>
+                    <label>Pasta de Arquivos</label>
+                    <input type="url" />
+                    <button>Selecionar</button>
+                </div>
+            </fieldset>
+            <div type="container">
+                <fieldset style="width: 300px; height: 80px; margin: 0px">
+                    <legend>Configuração de Transição</legend>
+                    <div>
+                        <label>Tempo de Página</label>
+                        <input type="time">
+                    </div>
+                    <div>
+                        <label>Tempo de Arquivo</label>
+                        <input type="time">
+                    </div>
+                </fieldset>
+                <fieldset style="width: 300px; height: 100px; margin: 0px; align-self: flex-end">
+                    <legend>Configuração de Exibição</legend>
+                    <div>
+                        <label>Altura</label>
+                        <input type="number">
+                    </div>
+                    <div>
+                        <label>Comprimento</label>
+                        <input type="number">
+                    </div>
+                    <div>
+                        <input type="checkbox">Loop de Arquivo</input>
+                    </div>
+                    <div>
+                        <button>Default</button>
+                        <button>Restaurar</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div>
+                <button>Confirmar</button>
+                <button>Cancelar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

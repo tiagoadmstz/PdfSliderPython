@@ -3,11 +3,11 @@ import os
 
 class Utilidades:
 
-    """
-    -> Pega as configurações do arquivo
-    return: retorna dicionário com valores de configuração
-    """
     def get_configuration(self):
+        """
+        -> Pega as configurações do arquivo
+        return: retorna dicionário com valores de configuração
+        """
         values = {}
         try:
             path = os.getcwd() + '\\configuration.conf'

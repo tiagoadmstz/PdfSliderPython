@@ -1,0 +1,18 @@
+{
+  "name": "pdfslider",
+  "version": "1.0.0",
+  "description": "Aplicativo que exibe as páginas de um arquivo PDF como se fossem slides.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Tiago Daniel Teixeira",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^5.0.7"
+  },
+  "dependencies": {
+    "electron-package": "^0.1.0",
+    "python-shell": "^1.0.7"
+  }
+}
